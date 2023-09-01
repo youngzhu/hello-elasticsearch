@@ -106,7 +106,7 @@ class HotelDocumentTest {
     @BeforeEach
     void setUp() {
         client = new RestHighLevelClient(RestClient.builder(
-                HttpHost.create("http://192.168.150.101:9200")
+                HttpHost.create("http://localhost:9200")
         ));
     }
 
@@ -114,7 +114,5 @@ class HotelDocumentTest {
     void tearDown() throws IOException {
         client.close();
     }
-
-
 
 }
